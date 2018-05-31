@@ -1,0 +1,89 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* default 16px -> now 10px; better for user changes */ }
+
+body {
+  box-sizing: border-box;
+  background-color: #F9F9F9; }
+
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 40vh;
+  justify-content: center;
+  align-content: center; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #000; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem !important; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0; }
+
+.main-text__btn-shake {
+  text-decoration: none;
+  border: none;
+  border-bottom: solid currentColor 3px;
+  line-height: 11.0rem;
+  cursor: pointer;
+  background-color: #F9F9F9;
+  font-family: "Bitter", cursive;
+  font-size: 14rem;
+  color: #2574BB;
+  transition: all .2s; }
+  .main-text__btn-shake:active, .main-text__btn-shake:focus, .main-text__btn-shake:hover {
+    outline: none; }
+    .main-text__btn-shake:active::before, .main-text__btn-shake:active::after, .main-text__btn-shake:focus::before, .main-text__btn-shake:focus::after, .main-text__btn-shake:hover::before, .main-text__btn-shake:hover::after {
+      color: rgba(37, 116, 187, 0.7);
+      display: inline-block;
+      transform: translateY(-1rem); }
+    .main-text__btn-shake:active::before, .main-text__btn-shake:focus::before, .main-text__btn-shake:hover::before {
+      content: ">"; }
+    .main-text__btn-shake:active::after, .main-text__btn-shake:focus::after, .main-text__btn-shake:hover::after {
+      content: "<"; }
+
+.main {
+  display: grid;
+  grid-template-columns: 60vw;
+  grid-template-rows: repeat(3, max-content);
+  justify-items: center;
+  align-items: center; }

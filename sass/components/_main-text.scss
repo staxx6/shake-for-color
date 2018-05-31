@@ -1,0 +1,43 @@
+.main-text {
+    &__btn-shake {
+        text-decoration: none;
+        border: none;
+        border-bottom: solid currentColor 3px;
+        line-height: 11.0rem;
+        cursor: pointer;
+        background-color: $color-white;
+
+        font-family: "Bitter", cursive;
+        font-size: 14rem;
+        color: $color-shake;
+
+        transition: all .2s;
+
+        &:active,
+        &:focus,
+        &:hover {
+            outline: none;
+            
+            &::before,
+            &::after {
+                color: rgba($color-shake, .7);
+                display: inline-block;
+                transform: translateY(-1rem);
+            }
+            &::before {
+                content: ">";
+            }
+            &::after {
+                content: "<";
+            }
+        }
+    }
+
+    &__for {
+
+    }
+
+    &__color {
+
+    }
+}

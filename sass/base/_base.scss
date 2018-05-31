@@ -10,29 +10,31 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; /* default 16px -> now 10px; better for user changes */
 
-    @include respond(tab-land) { // widht < 1200?
-        font-size: 56.25%; 
-    }
-
-    @include respond(tab-port) { // widht < 900? First one is selected too -> Order!
-        font-size: 50%; // 1 rem = 8px, 8/16 = 50%
-    }
-
-    @include respond(big) {
-        font-size: 75%;
-    }
+    // @include respond(small) {
+    //     font-size: 56.25%; 
+    // }
 }
 
 body {
     box-sizing: border-box;
-    padding: 3rem;
+    background-color: $color-white;
 
-    @include respond(tab-port) {
-        padding: 0;
-    }
+    // @include respond(medium) {
+    //     padding: 0;
+    // }
 }
 
 ::selection {
-    background-color: $color-primary;
-    color: $color-white;
+    // background-color: $color-primary;
+    // color: $color-white;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: repeat(2, max-content);
+    grid-gap: 40vh;
+    justify-content: center;
+    align-content: center;
 }

@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* default 16px -> now 10px; better for user changes */ }
+
+body {
+  box-sizing: border-box;
+  padding: 3rem; }
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  color: #000; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-top-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-top-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-bottom: 10rem !important; }
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.5) scaleY(1.6);
+    opacity: 0; }
