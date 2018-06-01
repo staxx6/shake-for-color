@@ -33,8 +33,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: max-content;
-    grid-template-rows: repeat(2, max-content);
-    grid-gap: 40vh;
+    grid-template-rows: 15vh max-content 30vh max-content;
     justify-content: center;
-    align-content: center;
+    justify-items: center;
 }
