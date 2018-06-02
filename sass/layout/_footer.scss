@@ -19,7 +19,7 @@
         justify-items: center;
         align-items: center;
 
-        transform: translateY(-50%);
+        transform: translateY(-65%);
 
         & > li {
             list-style: none;
@@ -27,7 +27,7 @@
             width: 100%;
             text-align: center;
             display: inline-block;
-            width: calc(100% + 1rem);
+            width: calc(100% + 1.2rem);
             background-color: $color-white;
         }
 
