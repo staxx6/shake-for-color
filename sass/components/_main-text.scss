@@ -9,12 +9,11 @@
             line-height: 11.0rem;
             cursor: pointer;
             background-color: rgba(0,0,0,0); //TODO why isn't it transparent from start?
-            position: relative;
-            transition: background-color var(--anim-shake);
             
             font-family: "Bitter", cursive;
             font-size: 14rem;
             color: var(--color-shake);
+            transition: color var(--anim-shake-delay), background-color var(--anim-shake-delay);
             
             &::before,
             &::after {
@@ -34,7 +33,6 @@
 
         }
 
-        &:active,
         &:focus,
         &:hover {
             outline: none;
@@ -57,13 +55,14 @@
         color: var(--color-for);
         transform: skewX(-20deg) scaleY(0.8);
         margin-top: -1.4rem;
+        transition: color var(--anim-shake-delay);
     }
 
     &__color {
         font-family: 'Oswald', sans-serif;
         font-size: 15rem;
         text-transform: uppercase;
-        color: var(--color-main);
+        color: var(--color-color);
         background-color: $color-black;
         width: 50rem;
         height: 15rem;
@@ -81,12 +80,14 @@
         &::before,
         &::after {
             content: "";
-            background: url(../img/arrow.svg);
+            background-color: var(--color-color-arrow);
+            // background: url(../img/arrow.svg);
+            mask: url(../img/arrow.svg);
+            -webkit-mask: url(../img/arrow.svg);
             width: 21.6rem;
             height: 9rem;   
             position: absolute;
-            // fill: var(--color-color-arrow);
-            fill: blue !important;
+            transition: background-color var(--anim-shake-delay);
         }
         
         &::before {
@@ -99,12 +100,18 @@
 }
 
 .testSVG {
-    background: url(../img/arrow.svg);
-    position: absolute;
+    // background: url(../img/arrow.svg);
+    fill: green !important;
+
+    
     display: inline-block;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
-    fill: blue !important;
+}
+
+img {
+    fill: green;
 }

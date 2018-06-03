@@ -13,6 +13,7 @@
     --color-main-hex: 249, 249, 249;
     --color-shake: #2574BB;
     --color-for: #31C432;
+    --color-color: #F9F9F9;
     --color-color-arrow: #F50D5F;
 
     --color-black: #2C2C2D;
@@ -20,6 +21,7 @@
 
     // ANIMATIONS TIME
     --anim-shake: 1.4s;
+    --anim-shake-delay: 0.4s 1s;
 }
 
 html {
@@ -35,7 +37,7 @@ body {
     box-sizing: border-box;
     background-color: var(--color-main);
 
-    transition: background-color 1.4s;
+    transition: background-color var(--anim-shake-delay);
 
     // @include respond(medium) {
     //     padding: 0;
@@ -43,8 +45,8 @@ body {
 }
 
 ::selection {
-    // background-color: $color-primary;
-    // color: $color-white;
+    background-color: var(--color-black);
+    color: var(--color-white);
 }
 
 .container {
