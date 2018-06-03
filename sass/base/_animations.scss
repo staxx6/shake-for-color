@@ -5,12 +5,12 @@
 
     30% {
         transform: translateX(25rem) rotateZ(3deg);
-        color: $color-white;
+        // color: var(--color-main);
     }
 
     50% {
         transform: translateX(-20rem) rotateZ(-3deg);
-        color: $color-black;
+        // color: var(--color-black);
     }
 
     65% {
@@ -19,7 +19,7 @@
 
     80% {
         transform: translateX(-20rem) rotateZ(-3deg);
-        color: $color-white;
+        // color: var(--color-main);
     }
 
     90% {

@@ -8,12 +8,13 @@
             border-bottom: solid currentColor 3px;
             line-height: 11.0rem;
             cursor: pointer;
-            background-color: var(--color-main);
+            background-color: rgba(0,0,0,0); //TODO why isn't it transparent from start?
             position: relative;
+            transition: background-color var(--anim-shake);
             
             font-family: "Bitter", cursive;
             font-size: 14rem;
-            color: $color-shake;
+            color: var(--color-shake);
             
             &::before,
             &::after {
@@ -69,8 +70,9 @@
         text-align: center; 
         line-height: .91;
         margin-top: -1rem;
+        transition: color var(--anim-shake);
 
-        animation: shake-color 1.4s ease-in-out 1;
+        // animation: shake-color 1.4s ease-in-out 1;
 
         /////// after shake text
         // font-size: 13rem;
@@ -83,8 +85,10 @@
             width: 21.6rem;
             height: 9rem;   
             position: absolute;
+            // fill: var(--color-color-arrow);
+            fill: blue !important;
         }
-
+        
         &::before {
             transform: translate(-23.5rem, 3rem);
         }
@@ -92,4 +96,15 @@
             transform: rotate(180deg) translate(-1.2rem, -3rem);
         }
     }
+}
+
+.testSVG {
+    background: url(../img/arrow.svg);
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    fill: blue !important;
 }

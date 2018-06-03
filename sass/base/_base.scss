@@ -7,12 +7,19 @@
 }
 
 :root {
-    --color-main: #F9F9F9;
+
+    // COLORS
+    --color-main: #F9F9F9; //TODO: name it white
     --color-main-hex: 249, 249, 249;
     --color-shake: #2574BB;
     --color-for: #31C432;
+    --color-color-arrow: #F50D5F;
 
-    // transition: all 1s;
+    --color-black: #2C2C2D;
+    --color-white:#F9F9F9;
+
+    // ANIMATIONS TIME
+    --anim-shake: 1.4s;
 }
 
 html {
@@ -27,6 +34,8 @@ html {
 body {
     box-sizing: border-box;
     background-color: var(--color-main);
+
+    transition: background-color 1.4s;
 
     // @include respond(medium) {
     //     padding: 0;
