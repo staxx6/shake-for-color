@@ -6,6 +6,15 @@
     box-sizing: inherit;
 }
 
+:root {
+    --color-main: #F9F9F9;
+    --color-main-hex: 249, 249, 249;
+    --color-shake: #2574BB;
+    --color-for: #31C432;
+
+    // transition: all 1s;
+}
+
 html {
     // This defines what 1rem is
     font-size: 62.5%; /* default 16px -> now 10px; better for user changes */
@@ -17,7 +26,7 @@ html {
 
 body {
     box-sizing: border-box;
-    background-color: $color-white;
+    background-color: var(--color-main);
 
     // @include respond(medium) {
     //     padding: 0;

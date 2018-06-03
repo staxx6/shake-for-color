@@ -8,30 +8,27 @@
             border-bottom: solid currentColor 3px;
             line-height: 11.0rem;
             cursor: pointer;
-            background-color: $color-white;
+            background-color: var(--color-main);
             position: relative;
             
             font-family: "Bitter", cursive;
             font-size: 14rem;
             color: $color-shake;
             
-            transition: all 1s;
-            
             &::before,
             &::after {
                 opacity: 0;
                 position: absolute;
-                transform: translateY(-1rem);
                 transition: all 1s;
             }
-
+            
             &::before { 
                 content: ">"; 
-                transform: translateX(-20rem);
+                transform: translateX(-20rem) translateY(-1.1rem);
             }
             &::after { 
                 content: "<"; 
-                transform: translateX(calc(20rem - 100%));
+                transform: translateX(calc(20rem - 100%)) translateY(-1.1rem);
             }
 
         }
@@ -43,12 +40,12 @@
 
             &::before {
                 opacity: 1;
-                transform: translateX(-95%);
+                transform: translateX(-95%) translateY(-1.1rem);
             }
 
             &::after {
                 opacity: 1;
-                transform: translateX(0);
+                transform: translateX(0) translateY(-1.1rem);
             }
         }
     }
@@ -56,7 +53,7 @@
     &__for {
         font-family: 'Qwigley', cursive;
         font-size: 10rem;
-        color: $color-for;
+        color: var(--color-for);
         transform: skewX(-20deg) scaleY(0.8);
         margin-top: -1.4rem;
     }
@@ -65,7 +62,7 @@
         font-family: 'Oswald', sans-serif;
         font-size: 15rem;
         text-transform: uppercase;
-        color: $color-white;
+        color: var(--color-main);
         background-color: $color-black;
         width: 50rem;
         height: 15rem;
@@ -76,8 +73,8 @@
         animation: shake-color 1.4s ease-in-out 1;
 
         /////// after shake text
-        font-size: 13rem;
-        line-height: 1.1;
+        // font-size: 13rem;
+        // line-height: 1.1;
 
         &::before,
         &::after {
