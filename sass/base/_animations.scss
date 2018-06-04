@@ -5,33 +5,32 @@
 
     30% {
         transform: translateX(25rem) rotateZ(3deg);
-        color: var(--color-white);
     }
-
+    
     50% {
         transform: translateX(-20rem) rotateZ(-3deg);
-        color: var(--color-black);
     }
-
+    
     65% {
         transform: translateX(20rem) rotateZ(3deg);
-        color: var(--color-black);
+        color: rgba(0,0,0,0);
     }
 
     80% {
         transform: translateX(-20rem) rotateZ(-3deg);
-        color: var(--color-main);
     }
-
+    
     90% {
         transform: translateX(5rem);
+        color: var(--color-main);
     }
-
+    
     95% {
         transform: translateX(-2rem);
     }
-
+    
     100% {
         transform: translateX(0);
+        color: var(--color-color);
     }
 }

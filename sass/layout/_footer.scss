@@ -5,7 +5,8 @@
     &__line {
         width: 100%;
         height: 1px;
-        background-color: $color-black;
+        background-color: var(--color-footer);
+        transition: background-color var(--anim-shake-delay);
     }
 
     &__navigation {
@@ -19,11 +20,10 @@
         justify-items: center;
         align-items: center;
 
-        transform: translateY(-65%);
+        transform: translateY(-58%);
 
         & > li {
             list-style: none;
-            background-color: $color-white;
             width: 100%;
             text-align: center;
             display: inline-block;
@@ -42,6 +42,7 @@
 
     &__btn {
         text-decoration: none;
-        color: $color-black;
+        color: var(--color-footer);
+        transition: color var(--anim-shake-delay);
     }
 }

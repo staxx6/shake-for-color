@@ -33,10 +33,7 @@
 
         }
 
-        &:focus,
         &:hover {
-            outline: none;
-
             &::before {
                 opacity: 1;
                 transform: translateX(-95%) translateY(-1.1rem);
@@ -47,6 +44,11 @@
                 transform: translateX(0) translateY(-1.1rem);
             }
         }
+
+        &:active,
+        &:focus {
+            outline:0;
+        }
     }
 
     &__for {
@@ -55,7 +57,7 @@
         color: var(--color-for);
         transform: skewX(-20deg) scaleY(0.8);
         margin-top: -1.4rem;
-        transition: color var(--anim-shake-delay);
+        transition: color var(--anim-shake-delay), opacity var(--anim-shake);
     }
 
     &__color {
@@ -63,19 +65,22 @@
         font-size: 15rem;
         text-transform: uppercase;
         color: var(--color-color);
-        background-color: $color-black;
-        width: 50rem;
+        background-color: var(--color-color-back);
+        width: 60rem;
         height: 15rem;
         text-align: center; 
         line-height: .91;
         margin-top: -1rem;
-        transition: color var(--anim-shake);
+        transition: color var(--anim-shake), background-color var(--anim-shake-delay);
 
-        // animation: shake-color 1.4s ease-in-out 1;
+        &--anim {
+            animation: shake-color 1.4s ease-in-out 1;
+        }
 
-        /////// after shake text
-        // font-size: 13rem;
-        // line-height: 1.1;
+        &--new-color {
+            color: var(--color-color);
+        }
+        
 
         &::before,
         &::after {
@@ -87,31 +92,14 @@
             width: 21.6rem;
             height: 9rem;   
             position: absolute;
-            transition: background-color var(--anim-shake-delay);
+            transition: all var(--anim-shake-delay);
         }
         
         &::before {
-            transform: translate(-23.5rem, 3rem);
+            transform: translate(-23.0rem, 3rem);
         }
         &::after {
             transform: rotate(180deg) translate(-1.2rem, -3rem);
         }
     }
-}
-
-.testSVG {
-    // background: url(../img/arrow.svg);
-    fill: green !important;
-
-    
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-img {
-    fill: green;
 }
