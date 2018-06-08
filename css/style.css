@@ -36,6 +36,7 @@
   --color-color-back: #2C2C2D;
   --color-footer: #2C2C2D;
   --color-black: #2C2C2D;
+  --color-black-hex: 44, 44, 45;
   --color-white:#F9F9F9;
   --anim-shake: 1.4s;
   --anim-shake-delay: 0.4s 1s; }
@@ -212,3 +213,28 @@ body {
     text-decoration: none;
     color: var(--color-footer);
     transition: color var(--anim-shake-delay); }
+  .footer__popup {
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(var(--color-black-hex), 0.8);
+    z-index: 100; }
+    @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+      .footer__popup {
+        background-color: rgba(var(--color-black-hex), 0.3);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px); } }
+    .footer__popup--source {
+      display: none; }
+    .footer__popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60%;
+      background-color: var(--color-white);
+      padding: 5rem;
+      display: grid;
+      grid-template-columns: repeat(2, max-content); }
