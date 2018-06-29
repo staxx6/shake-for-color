@@ -44,6 +44,9 @@
 html {
   font-size: 62.5%;
   /* default 16px -> now 10px; better for user changes */ }
+  @media only screen and (max-width: 93em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
@@ -218,15 +221,16 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(var(--color-black-hex), 0.8);
-  z-index: 100; }
+  background-color: rgba(var(--color-black-hex), 0.95);
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s; }
   @supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
     .popup {
       background-color: rgba(var(--color-black-hex), 0.3);
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px); } }
-  .popup--source {
-    display: none; }
   .popup-content {
     position: absolute;
     top: 50%;
@@ -246,7 +250,7 @@ body {
       grid-column: 1 / span 1; }
   .popup-paragraph {
     font-size: 1.5rem;
-    line-height: 1.3; }
+    line-height: 1.5; }
     .popup-paragraph--about {
       grid-column: 1 / span 2; }
     .popup-paragraph--me {
@@ -263,3 +267,8 @@ body {
     transform-origin: 50% 50%; }
     .popup__btn-close:hover, .popup__btn-close:focus {
       color: orangered; }
+    .popup__btn-close:active {
+      transform: scale(0.4); }
+  .popup:target {
+    opacity: 1;
+    visibility: visible; }

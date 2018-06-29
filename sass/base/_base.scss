@@ -31,9 +31,9 @@ html {
     // This defines what 1rem is
     font-size: 62.5%; /* default 16px -> now 10px; better for user changes */
 
-    // @include respond(small) {
-    //     font-size: 56.25%; 
-    // }
+    @include respond(medium) {
+        font-size: 50%; 
+    }
 }
 
 body {
