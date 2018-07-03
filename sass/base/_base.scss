@@ -10,7 +10,7 @@
 
     // COLORS
     --color-main: #F9F9F9; //TODO: name it white
-    --color-main-hex: 249, 249, 249;
+    --color-main-hex: 249, 249, 249; //rgb not hex
     --color-shake: #2574BB;
     --color-for: #31C432;
     --color-color: #F9F9F9;
@@ -19,8 +19,11 @@
     --color-footer: #2C2C2D;
 
     --color-black: #2C2C2D;
-    --color-black-hex: 44, 44, 45;
+    --color-black-hex: 44, 44, 45; // rgb not hex
     --color-white:#F9F9F9;
+    --color-white-rgb: 249, 249, 249;
+    --color-magenta: #F50D5F;
+    --color-magenta-rgb: 245, 13, 95;
 
     // ANIMATIONS TIME
     --anim-shake: 1.4s;

@@ -38,6 +38,9 @@
   --color-black: #2C2C2D;
   --color-black-hex: 44, 44, 45;
   --color-white:#F9F9F9;
+  --color-white-rgb: 249, 249, 249;
+  --color-magenta: #F50D5F;
+  --color-magenta-rgb: 245, 13, 95;
   --anim-shake: 1.4s;
   --anim-shake-delay: 0.4s 1s; }
 
@@ -172,6 +175,25 @@ body {
     transform: translate(-23rem, 3rem); }
   .main-text__color::after {
     transform: rotate(180deg) translate(-1.2rem, -3rem); }
+  .main-text__color-btn, .main-text__color-btn-txt {
+    background: none;
+    border: none;
+    outline: none; }
+
+.link--outside {
+  display: inline-block; }
+  .link--outside, .link--outside:link, .link--outside:visited {
+    text-decoration: none;
+    color: var(--color-magenta);
+    padding: 1px 3px;
+    margin: -1px -3px;
+    transition: all .2s; }
+  .link--outside:active, .link--outside:focus, .link--outside:hover {
+    color: var(--color-white);
+    background: var(--color-magenta); }
+  .link--outside:active, .link--outside:focus {
+    outline: none;
+    transform: translateY(1px); }
 
 .main {
   display: grid;
@@ -210,10 +232,15 @@ body {
       grid-column: 4 / span 1; }
     .footer__list-item--3 {
       grid-column: 6 / span 1; }
-  .footer__btn {
+  .footer__btn, .footer__btn:link, .footer__btn:visited {
     text-decoration: none;
     color: var(--color-footer);
-    transition: color var(--anim-shake-delay); }
+    padding: 1px 3px;
+    margin: -1px -3px;
+    transition: color var(--anim-shake-delay), background 0.2s; }
+  .footer__btn:active, .footer__btn:focus, .footer__btn:hover {
+    background: rgba(var(--color-black-hex), 0.7);
+    outline: none; }
 
 .popup {
   height: 100vh;
@@ -236,7 +263,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 48%;
+    width: 38%;
     background-color: var(--color-white);
     box-shadow: 0 2rem 3rem rgba(var(--color-black-hex), 0.2);
     border-radius: 3px;
@@ -266,9 +293,11 @@ body {
     transition: all .2s;
     transform-origin: 50% 50%; }
     .popup__btn-close:hover, .popup__btn-close:focus {
-      color: orangered; }
+      color: var(--color-magenta); }
     .popup__btn-close:active {
       transform: scale(0.4); }
+  .popup__header {
+    margin-bottom: -2rem; }
   .popup:target {
     opacity: 1;
     visibility: visible; }

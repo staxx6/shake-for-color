@@ -1,0 +1,28 @@
+.link {
+    &--outside {
+        display: inline-block;
+
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: var(--color-magenta);
+            padding: 1px 3px;
+            margin: -1px -3px;
+            transition: all .2s;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            color: var(--color-white);
+            background: var(--color-magenta);
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+            transform: translateY(1px);
+        }
+    }
+}

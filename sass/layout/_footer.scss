@@ -41,9 +41,22 @@
     }
 
     &__btn {
-        text-decoration: none;
-        color: var(--color-footer);
-        transition: color var(--anim-shake-delay);
+        &,
+        &:link,
+        &:visited {
+            text-decoration: none;
+            color: var(--color-footer);
+            padding: 1px 3px;
+            margin: -1px -3px;
+            transition: color var(--anim-shake-delay), background .2s;
+        }
+
+        &:active,
+        &:focus,
+        &:hover {
+            background: rgba(var(--color-black-hex), .7);
+            outline: none;
+        }
     }
 }
 
@@ -72,7 +85,7 @@
 
     &-content {
         @include absCenter;
-        width: 48%;
+        width: 38%;
         background-color: var(--color-white);
         box-shadow: 0 2rem 3rem rgba(var(--color-black-hex), .2);
         border-radius: 3px;
@@ -117,12 +130,16 @@
         &:focus {
             // transform: scale(1.4);
             // text-shadow: 
-            color: orangered;
+            color: var(--color-magenta);
         }
 
         &:active {
             transform: scale(0.4);
         }
+    }
+
+    &__header {
+        margin-bottom: -2rem;
     }
 
     // Open states

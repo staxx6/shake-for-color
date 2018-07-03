@@ -23,8 +23,17 @@ let brightness = (colorHex) => {
     );
 }
 
+// Creates a textinput field inside a button
+let colorBtn = (newColor) => `<button id=\"btn-color\" class=\"main-text__color-btn\" onclick=\"copyHex()\"><input type=\"text\" value=\"${newColor}\" id=\"btn-txt-color\" class=\"main-text__color-btn-txt\" readOnly=\"readOnly\"></button>`;
+
+let copyHex = () => {
+    let btn = document.getElementById('btn-txt-color');
+    btn.select();
+    document.execCommand("copy");
+}
+
 let shake = () => {
-    let newColor = getNewColor(); // TODO here new color func //demo color: #F5309C
+    let newColor = getNewColor();
     setDocStyleProperty('--color-main', newColor);
 
     let varColorText = brightness(newColor) < 130 ? '--color-white' : '--color-black';
@@ -40,7 +49,8 @@ let shake = () => {
     getFirstClass('main-text__color').style.animation = `shake-color ${animationTime}s ease-in-out`;
     
     setTimeout(() => {
-        getFirstClass('main-text__color').innerHTML = newColor;
+        //getFirstClass('main-text__color').innerHTML = newColor; // without text copy
+        getFirstClass('main-text__color').innerHTML = colorBtn(newColor);
         setDocStyleProperty('--color-color', newColor);
     }, animationTime / 2 * 1000 + 50);
 

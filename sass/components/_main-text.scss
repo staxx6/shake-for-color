@@ -47,7 +47,7 @@
 
         &:active,
         &:focus {
-            outline:0;
+            outline:    0;
         }
     }
 
@@ -100,6 +100,13 @@
         }
         &::after {
             transform: rotate(180deg) translate(-1.2rem, -3rem);
+        }
+
+        &-btn,
+        &-btn-txt {
+            background: none;
+            border: none;
+            outline: none;
         }
     }
 }
