@@ -14,6 +14,8 @@
     65% {
         transform: translateX(20rem) rotateZ(3deg);
         color: rgba(0,0,0,0);
+        // visibility: hidden;
+        // display: none;
     }
 
     80% {
@@ -22,7 +24,7 @@
     
     90% {
         transform: translateX(5rem);
-        color: var(--color-main);
+        // color: var(--color-main);
     }
     
     95% {
@@ -31,6 +33,6 @@
     
     100% {
         transform: translateX(0);
-        color: var(--color-color);
+        // color: var(--color-color);
     }
 }

@@ -11,13 +11,11 @@
   80% {
     transform: translateX(-20rem) rotateZ(-3deg); }
   90% {
-    transform: translateX(5rem);
-    color: var(--color-main); }
+    transform: translateX(5rem); }
   95% {
     transform: translateX(-2rem); }
   100% {
-    transform: translateX(0);
-    color: var(--color-color); } }
+    transform: translateX(0); } }
 
 *,
 *::after,
@@ -108,6 +106,7 @@ body {
 .main-text__btn-shake, .main-text__btn-shake:link, .main-text__btn-shake:visited {
   text-decoration: none;
   border: none;
+  outline: none;
   border-bottom: solid currentColor 3px;
   line-height: 11.0rem;
   cursor: pointer;
@@ -155,11 +154,22 @@ body {
   width: 60rem;
   height: 15rem;
   text-align: center;
-  line-height: .91;
   margin-top: -1rem;
   transition: color var(--anim-shake), background-color var(--anim-shake-delay); }
+  .main-text__color-btn, .main-text__color-btn-txt {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0; }
+  .main-text__color-btn-txt {
+    font-family: 'Oswald', sans-serif;
+    font-size: 15rem;
+    text-transform: uppercase;
+    color: var(--color-color);
+    text-align: center; }
   .main-text__color--anim {
-    animation: shake-color 1.4s ease-in-out 1; }
+    animation: shake-color var(--anim-shake) ease-in-out 1; }
   .main-text__color--new-color {
     color: var(--color-color); }
   .main-text__color::before, .main-text__color::after {
@@ -172,13 +182,9 @@ body {
     position: absolute;
     transition: all var(--anim-shake-delay); }
   .main-text__color::before {
-    transform: translate(-23rem, 3rem); }
+    transform: translate(-20rem, 3rem); }
   .main-text__color::after {
-    transform: rotate(180deg) translate(-1.2rem, -3rem); }
-  .main-text__color-btn, .main-text__color-btn-txt {
-    background: none;
-    border: none;
-    outline: none; }
+    transform: rotate(180deg) translate(-2.2rem, -3rem); }
 
 .link--outside {
   display: inline-block; }
@@ -263,6 +269,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    top: 40%;
     width: 38%;
     background-color: var(--color-white);
     box-shadow: 0 2rem 3rem rgba(var(--color-black-hex), 0.2);

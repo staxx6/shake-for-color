@@ -11,14 +11,44 @@
     <link href="https://fonts.googleapis.com/css?family=Bitter|Oswald:600|Qwigley" rel="stylesheet">
 
     <title>Shake for color</title>
+
+    <style>
+        @keyframes test-anim {
+            0% {
+
+            }
+
+            33% {
+                color: yellow;
+            }
+
+            50% {
+                color: rgba(0, 0, 0, 0);
+            }
+
+            100% {
+                color: blue;
+            }
+        }
+        #testid {
+            color: red;
+            animation: test-anim 5s infinite;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <main class="main">
+            <button id="test"><input type="text" id="testid" value="test"></input></button>
+            <br></br><br></br>
             <button class="main-text__btn-shake" onclick="shake()">Shake</button>
             <div class="main-text__for">for</div>
-            <div class="main-text__color">color</div>
+            <div class="main-text__color">
+                <button id="btn-color" class="main-text__color-btn" onclick="copyHex()">
+                    <input type="text" value="color" id="btn-txt-color" class="main-text__color-btn-txt" readOnly="readOnly">
+                </button>
+            </div>
         </main>
 
         <footer class="footer">

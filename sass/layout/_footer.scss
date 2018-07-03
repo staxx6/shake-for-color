@@ -85,6 +85,7 @@
 
     &-content {
         @include absCenter;
+        top: 40%;
         width: 38%;
         background-color: var(--color-white);
         box-shadow: 0 2rem 3rem rgba(var(--color-black-hex), .2);
